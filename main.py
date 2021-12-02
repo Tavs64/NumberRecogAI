@@ -17,7 +17,7 @@ model.add(tf.keras.layers.Dense(units=10, activation=tf.nn.softmax))            
 
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])       # Here we compile the model to our specefied settings
 
-model.fit(x_train, y_train, epochs=3)
+model.fit(x_train, y_train, epochs=5)                                                               # Set to 3 if everything fucks up
 
 loss, accuracy = model.evaluate(x_test, y_test)                                                     # Here we get the models Accuracy, and Loss
 print(accuracy)                                                                                     # Here we print our accuracy from the previous line (higher is better)
